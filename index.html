@@ -1,0 +1,721 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>宏豐實業股份有限公司 | Big Full Industrial Co., Ltd.｜風味糖漿・椰果・果醬</title>
+<meta name="description" content="宏豐實業股份有限公司 Big Full Industrial — 專業食品製造廠，通過 ISO 22000 與 HACCP 驗證。生產濃糖果汁、風味糖漿、椰果、果醬，並提供 OEM 客製化代工服務。Specializing in thick sugar juice, flavor syrup, coconut jelly and jam. ISO 22000 & HACCP certified.">
+<meta name="keywords" content="宏豐實業,Big Full Industrial,風味糖漿,濃糖果汁,椰果,果醬,OEM代工,飲料原料,糖漿工廠,彰化食品廠,flavor syrup,coconut jelly,jam,thick sugar juice">
+<meta property="og:title" content="宏豐實業股份有限公司 | Big Full Industrial Co., Ltd.">
+<meta property="og:description" content="專業食品製造廠，通過 ISO 22000 與 HACCP 驗證。風味糖漿、濃糖果汁、椰果、果醬與 OEM 客製化代工。">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="zh_TW">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@500;600;700;900&family=Noto+Sans+TC:wght@400;500;700&family=Archivo:wght@500;600;700;800&family=IBM+Plex+Mono:wght@500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bottle:#0f3d35;       /* 瓶綠 主色 */
+    --bottle-deep:#0a2a25;  /* 更深 */
+    --bottle-soft:#16544a;
+    --gold:#c89a4a;         /* 暖金 accent */
+    --gold-light:#e0bd7a;
+    --cream:#f6f3ec;        /* 紙白底 */
+    --cream-deep:#ece6d8;
+    --ink:#1c211f;
+    --line:rgba(15,61,53,.14);
+    --shadow:0 18px 50px -28px rgba(10,42,37,.55);
+    --maxw:1200px;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{
+    font-family:"Noto Sans TC",system-ui,sans-serif;
+    background:var(--cream);color:var(--ink);
+    line-height:1.7;-webkit-font-smoothing:antialiased;
+    overflow-x:hidden;
+  }
+  .serif{font-family:"Noto Serif TC",serif;}
+  .en{font-family:"Archivo",sans-serif;}
+  .mono{font-family:"IBM Plex Mono",monospace;}
+  a{color:inherit;text-decoration:none}
+  img{display:block;max-width:100%}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 28px}
+  .eyebrow{
+    font-family:"IBM Plex Mono",monospace;font-size:.72rem;letter-spacing:.32em;
+    text-transform:uppercase;color:var(--gold);font-weight:500;
+    display:flex;align-items:center;gap:12px;margin-bottom:18px;
+  }
+  .eyebrow::before{content:"";width:30px;height:1px;background:var(--gold);display:inline-block}
+
+  /* ===== NAV ===== */
+  header.nav{position:fixed;top:0;left:0;right:0;z-index:100;
+    transition:.4s;padding:18px 0;
+    background:rgba(10,42,37,0);backdrop-filter:blur(0px);}
+  header.nav.solid{background:rgba(10,42,37,.94);backdrop-filter:blur(12px);
+    padding:12px 0;box-shadow:0 10px 30px -20px rgba(0,0,0,.6)}
+  .nav-inner{display:flex;align-items:center;justify-content:space-between}
+  .brand{display:flex;align-items:center;gap:12px;color:#fff}
+  .brand-logo{height:44px;width:auto;border-radius:4px;background:#fff;padding:3px;object-fit:contain;flex-shrink:0}
+  .brand-txt{display:flex;flex-direction:column;line-height:1.15}
+  .brand .cn{font-family:"Noto Serif TC";font-weight:700;font-size:1.18rem;letter-spacing:.04em}
+  .brand .en{font-size:.62rem;letter-spacing:.28em;color:var(--gold-light);text-transform:uppercase;margin-top:2px}
+  .nav-links{display:flex;gap:30px;align-items:center}
+  .nav-links a{color:rgba(255,255,255,.82);font-size:.9rem;font-weight:500;position:relative;transition:.25s}
+  .nav-links a::after{content:"";position:absolute;left:0;bottom:-6px;width:0;height:2px;background:var(--gold);transition:.3s}
+  .nav-links a:hover{color:#fff}.nav-links a:hover::after{width:100%}
+  .nav-cta{background:var(--gold);color:var(--bottle-deep);padding:9px 20px;border-radius:2px;
+    font-weight:700;font-size:.86rem;transition:.25s}
+  .nav-cta:hover{background:var(--gold-light);transform:translateY(-1px)}
+  .burger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:6px}
+  .burger span{width:24px;height:2px;background:#fff;transition:.3s}
+
+  /* ===== HERO ===== */
+  .hero{position:relative;display:flex;align-items:center;
+    background:linear-gradient(120deg,var(--bottle-deep) 0%,var(--bottle) 55%,var(--bottle-soft) 100%);
+    color:#fff;overflow:hidden;padding:140px 0 70px}
+  .hero::before{content:"";position:absolute;inset:0;
+    background:
+      radial-gradient(circle at 82% 28%,rgba(200,154,74,.22),transparent 42%),
+      radial-gradient(circle at 12% 88%,rgba(22,84,74,.6),transparent 45%);}
+  /* 抽象果滴裝飾 */
+  .drop{position:absolute;border-radius:60% 40% 55% 45%/55% 45% 55% 45%;
+    background:linear-gradient(135deg,rgba(200,154,74,.16),rgba(224,189,122,.05));
+    border:1px solid rgba(224,189,122,.18);filter:blur(.3px)}
+  .drop.d1{width:340px;height:340px;top:-60px;right:-40px;animation:float 14s ease-in-out infinite}
+  .drop.d2{width:180px;height:180px;bottom:60px;right:18%;animation:float 11s ease-in-out infinite reverse}
+  .drop.d3{width:90px;height:90px;top:32%;right:46%;animation:float 9s ease-in-out infinite}
+  @keyframes float{0%,100%{transform:translateY(0) rotate(0)}50%{transform:translateY(-26px) rotate(8deg)}}
+  .hero-inner{position:relative;z-index:2;width:100%;display:block}
+  .hero-top{display:grid;grid-template-columns:1.4fr 1fr;gap:48px;align-items:end;margin-bottom:44px}
+  .hero-text{max-width:720px}
+  .hero-side{padding-bottom:6px}
+  .hero-cert{font-family:"Archivo";font-weight:700;font-size:clamp(.84rem,1.3vw,1.06rem);
+    letter-spacing:.12em;color:var(--gold-light);text-transform:uppercase;
+    padding:10px 0;border-top:1px solid rgba(224,189,122,.35);border-bottom:1px solid rgba(224,189,122,.35);
+    display:inline-block;margin-bottom:24px}
+  .hero-name{font-family:"Archivo";font-weight:800;
+    font-size:clamp(2.4rem,5.5vw,4.4rem);line-height:1;letter-spacing:-.02em;
+    color:#fff;text-transform:none;margin:0}
+  .hero-name span{color:var(--gold-light)}
+  .hero-cn{font-family:"Noto Serif TC";font-weight:700;font-size:clamp(1.3rem,2.4vw,1.9rem);
+    color:rgba(255,255,255,.92);margin-top:14px;letter-spacing:.06em}
+  .hero .lead{font-size:clamp(.98rem,1.4vw,1.1rem);color:rgba(255,255,255,.8);
+    margin:18px 0 0;font-weight:400}
+  .hero .lead .en{display:block;font-size:.88rem;color:rgba(255,255,255,.58);margin-top:8px;letter-spacing:.02em}
+  .hero-tags{display:flex;flex-wrap:wrap;gap:10px;margin-top:0}
+  .hero-tags span{border:1px solid rgba(224,189,122,.4);color:var(--gold-light);
+    padding:6px 14px;border-radius:30px;font-size:.8rem;font-weight:500;backdrop-filter:blur(4px)}
+  .hero-actions{display:flex;gap:16px;margin-top:22px;flex-wrap:wrap}
+  .hero-img{position:relative;width:100%}
+  .hero-photo{position:relative;margin:0}
+  .hero-photo img{width:100%;height:auto;display:block;object-fit:contain;border-radius:10px;
+    box-shadow:0 40px 90px -40px rgba(0,0,0,.8);border:1px solid rgba(224,189,122,.25)}
+  .hero-img-tag{position:absolute;bottom:18px;left:18px;
+    background:rgba(10,42,37,.88);backdrop-filter:blur(6px);color:#fff;
+    font-size:.84rem;padding:10px 17px;border-radius:4px;border-left:3px solid var(--gold);letter-spacing:.04em}
+  .btn{padding:14px 30px;border-radius:2px;font-weight:700;font-size:.95rem;transition:.28s;display:inline-flex;align-items:center;gap:10px;cursor:pointer;border:none}
+  .btn-gold{background:var(--gold);color:var(--bottle-deep)}
+  .btn-gold:hover{background:var(--gold-light);transform:translateY(-2px);box-shadow:0 14px 30px -14px rgba(200,154,74,.7)}
+  .btn-ghost{background:transparent;border:1px solid rgba(255,255,255,.35);color:#fff}
+  .btn-ghost:hover{border-color:var(--gold-light);background:rgba(255,255,255,.06)}
+  .scroll-hint{position:absolute;bottom:28px;left:50%;transform:translateX(-50%);
+    color:rgba(255,255,255,.5);font-size:.7rem;letter-spacing:.3em;text-transform:uppercase;
+    display:flex;flex-direction:column;align-items:center;gap:8px;z-index:2}
+  .scroll-hint::after{content:"";width:1px;height:34px;background:linear-gradient(rgba(255,255,255,.5),transparent);animation:scrolly 2s infinite}
+  @keyframes scrolly{0%{opacity:0;transform:scaleY(.3)}50%{opacity:1}100%{opacity:0;transform:scaleY(1) translateY(10px)}}
+
+  /* ===== 認證帶 ===== */
+  .certbar{background:var(--bottle-deep);color:#fff;padding:30px 0;border-top:1px solid rgba(224,189,122,.15)}
+  .certbar-inner{display:flex;align-items:flex-start;justify-content:center;gap:50px;flex-wrap:wrap;text-align:center}
+  .certbar .badge{display:flex;align-items:flex-start;gap:14px}
+  .certbar .badge .ring{width:64px;height:64px;border-radius:50%;border:2px solid var(--gold);
+    display:flex;align-items:center;justify-content:center;font-family:"Archivo";font-weight:800;
+    color:var(--gold-light);font-size:.8rem;letter-spacing:.04em;flex-shrink:0}
+  .certbar .badge .t{text-align:left}
+  .certbar .badge .t b{display:block;font-family:"Archivo";font-weight:700;letter-spacing:.06em;font-size:1.3rem}
+  .certbar .badge .t small{color:rgba(255,255,255,.6);font-size:.84rem}
+  .cert-links{display:flex;gap:10px;margin-top:8px}
+  .cert-links a{font-family:"IBM Plex Mono";font-size:.72rem;color:var(--gold-light);
+    border:1px solid rgba(224,189,122,.35);padding:3px 10px;border-radius:20px;transition:.2s}
+  .cert-links a:hover{background:var(--gold);color:var(--bottle-deep);border-color:var(--gold)}
+
+  /* ===== SECTIONS ===== */
+  section{padding:96px 0}
+  .sec-head{max-width:760px;margin-bottom:56px}
+  .sec-head h2{font-family:"Noto Serif TC";font-weight:700;font-size:clamp(1.9rem,4vw,2.9rem);
+    line-height:1.18;color:var(--bottle);letter-spacing:.01em}
+  .sec-head h2 .en{display:block;font-family:"Archivo";font-weight:600;font-size:.9rem;
+    letter-spacing:.18em;color:var(--gold);text-transform:uppercase;margin-top:10px}
+  .sec-head p{margin-top:20px;color:#4a5450;font-size:1.04rem}
+
+  /* ABOUT */
+  .about{background:var(--cream)}
+  .about-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:60px;align-items:center}
+  .about-text p{margin-bottom:18px;color:#3c4642}
+  .about-text .en-block{font-size:.92rem;color:#6b736f;border-left:2px solid var(--gold);padding-left:20px;margin-top:8px}
+  .about-imgs{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+  .about-imgs img{width:100%;height:230px;object-fit:cover;border-radius:3px;box-shadow:var(--shadow)}
+  .about-imgs img:first-child{grid-column:1/-1;height:280px}
+  .stats{display:flex;gap:40px;margin-top:40px;flex-wrap:wrap}
+  .stat .num{font-family:"Archivo";font-weight:800;font-size:2.6rem;color:var(--bottle);line-height:1}
+  .stat .num .plus{color:var(--gold)}
+  .stat .lbl{font-size:.84rem;color:#6b736f;margin-top:6px}
+
+  /* PRODUCTS */
+  .products{background:var(--bottle-deep);color:#fff}
+  .products .sec-head h2{color:#fff}
+  .products .sec-head h2 .en{color:var(--gold-light)}
+  .products .sec-head p{color:rgba(255,255,255,.7)}
+  .prod-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+  .prod-card{background:rgba(255,255,255,.04);border:1px solid rgba(224,189,122,.16);
+    border-radius:4px;overflow:hidden;transition:.35s;cursor:default}
+  .prod-card:hover{transform:translateY(-6px);border-color:rgba(224,189,122,.5);
+    background:rgba(255,255,255,.07)}
+  .prod-card .ph{height:260px;overflow:hidden;position:relative;
+    background:linear-gradient(135deg,var(--bottle-soft),var(--bottle-deep));
+    display:flex;align-items:center;justify-content:center;padding:14px}
+  .prod-card .ph img{max-width:100%;max-height:100%;width:auto;height:auto;object-fit:contain;transition:.6s}
+  .prod-card:hover .ph img{transform:scale(1.06)}
+  .prod-card .ph .no{position:absolute;top:14px;left:14px;font-family:"IBM Plex Mono";
+    font-size:.72rem;color:#fff;background:rgba(10,42,37,.7);padding:4px 10px;border-radius:2px;letter-spacing:.1em}
+  .prod-card .body{padding:24px 26px 28px}
+  .prod-card h3{font-family:"Noto Serif TC";font-weight:700;font-size:1.4rem;margin-bottom:2px}
+  .prod-card h3 .en{font-family:"Archivo";font-weight:600;font-size:.78rem;letter-spacing:.12em;
+    color:var(--gold-light);text-transform:uppercase;display:block;margin-top:4px}
+  .prod-card .spec{font-family:"IBM Plex Mono";font-size:.98rem;font-weight:500;color:var(--gold-light);
+    margin:14px 0 16px;line-height:1.5;border-left:2px solid rgba(224,189,122,.35);padding-left:12px}
+  .prod-card .desc{font-size:.92rem;color:rgba(255,255,255,.75)}
+  .flavor-toggle{margin-top:18px;color:var(--gold-light);font-size:.84rem;font-weight:700;
+    cursor:pointer;display:inline-flex;align-items:center;gap:6px;user-select:none}
+  .flavor-toggle .arrow{transition:.3s}
+  .flavor-toggle.open .arrow{transform:rotate(180deg)}
+  .flavors{max-height:0;overflow:hidden;transition:max-height .45s ease;margin-top:0}
+  .flavors.open{max-height:600px;margin-top:16px}
+  .flavors .cloud{display:flex;flex-wrap:wrap;gap:7px}
+  .flavors .cloud span{font-size:.76rem;padding:5px 11px;background:rgba(224,189,122,.1);
+    border:1px solid rgba(224,189,122,.2);border-radius:20px;color:rgba(255,255,255,.82)}
+
+  /* GALLERY */
+  .gallery{background:var(--cream-deep)}
+  .gal-tabs{display:flex;gap:10px;margin-bottom:34px;flex-wrap:wrap}
+  .gal-tab{padding:9px 22px;border:1px solid var(--line);background:#fff;border-radius:30px;
+    font-size:.88rem;font-weight:500;cursor:pointer;transition:.25s;color:#4a5450}
+  .gal-tab.active{background:var(--bottle);color:#fff;border-color:var(--bottle)}
+  .gal-tab:hover:not(.active){border-color:var(--gold)}
+  .gal-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+  .gal-item{aspect-ratio:1;overflow:hidden;border-radius:3px;cursor:pointer;position:relative;background:#ddd}
+  .gal-item img{width:100%;height:100%;object-fit:cover;transition:.5s}
+  .gal-item:hover img{transform:scale(1.08)}
+  .gal-item::after{content:"＋";position:absolute;inset:0;display:flex;align-items:center;justify-content:center;
+    background:rgba(15,61,53,.55);color:#fff;font-size:2rem;opacity:0;transition:.3s}
+  .gal-item:hover::after{opacity:1}
+  .gal-item.hide{display:none}
+
+  /* lightbox */
+  .lightbox{position:fixed;inset:0;background:rgba(10,42,37,.94);z-index:200;display:none;
+    align-items:center;justify-content:center;padding:40px;cursor:zoom-out}
+  .lightbox.show{display:flex}
+  .lightbox img{max-width:90%;max-height:88vh;border-radius:4px;box-shadow:0 30px 80px rgba(0,0,0,.6)}
+  .lightbox .close{position:absolute;top:24px;right:30px;color:#fff;font-size:2rem;cursor:pointer;line-height:1}
+
+  /* OEM */
+  .oem{background:linear-gradient(120deg,var(--bottle) 0%,var(--bottle-soft) 100%);color:#fff;position:relative;overflow:hidden}
+  .oem::before{content:"OEM";position:absolute;right:-20px;bottom:-60px;font-family:"Archivo";font-weight:800;
+    font-size:22rem;color:rgba(255,255,255,.04);line-height:1;letter-spacing:-.04em}
+  .oem-inner{position:relative;z-index:2;max-width:780px}
+  .oem h2{font-family:"Noto Serif TC";font-weight:700;font-size:clamp(1.9rem,4vw,2.9rem);margin-bottom:8px}
+  .oem h2 .en{display:block;font-family:"Archivo";font-weight:600;font-size:.9rem;letter-spacing:.18em;
+    color:var(--gold-light);text-transform:uppercase;margin-top:10px}
+  .oem p{color:rgba(255,255,255,.82);font-size:1.06rem;margin-top:22px;max-width:600px}
+  .oem p .en{display:block;font-size:.9rem;color:rgba(255,255,255,.6);margin-top:10px}
+  .oem-steps{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;margin-top:46px}
+  .oem-step .n{font-family:"IBM Plex Mono";color:var(--gold-light);font-size:.8rem;letter-spacing:.1em}
+  .oem-step h4{font-family:"Noto Serif TC";font-size:1.12rem;margin:8px 0 4px}
+  .oem-step p{font-size:.84rem;color:rgba(255,255,255,.65);margin-top:4px}
+
+  /* CONTACT */
+  .contact{background:var(--cream)}
+  .contact-grid{display:grid;grid-template-columns:.95fr 1.05fr;gap:60px}
+  .contact-info .row{display:flex;gap:16px;margin-bottom:26px;align-items:flex-start}
+  .contact-info .ic{width:42px;height:42px;border-radius:50%;background:var(--bottle);color:var(--gold-light);
+    display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:1.1rem}
+  .contact-info .row .label{font-family:"IBM Plex Mono";font-size:.7rem;letter-spacing:.16em;
+    text-transform:uppercase;color:var(--gold);margin-bottom:3px}
+  .contact-info .row .val{color:var(--ink);font-weight:500;font-size:.98rem}
+  .contact-info .row .val small{display:block;color:#6b736f;font-weight:400;font-size:.82rem;margin-top:2px}
+  .form{background:#fff;border:1px solid var(--line);border-radius:6px;padding:38px;box-shadow:var(--shadow)}
+  .form h3{font-family:"Noto Serif TC";font-weight:700;font-size:1.4rem;color:var(--bottle);margin-bottom:6px}
+  .form .sub{font-size:.86rem;color:#6b736f;margin-bottom:24px}
+  .field{margin-bottom:18px}
+  .field label{display:block;font-size:.8rem;font-weight:700;color:#3c4642;margin-bottom:7px}
+  .field label .req{color:var(--gold)}
+  .field input,.field textarea,.field select{width:100%;padding:12px 14px;border:1px solid var(--line);
+    border-radius:3px;font-family:inherit;font-size:.95rem;background:var(--cream);transition:.2s;color:var(--ink)}
+  .field input:focus,.field textarea:focus,.field select:focus{outline:none;border-color:var(--gold);
+    background:#fff;box-shadow:0 0 0 3px rgba(200,154,74,.12)}
+  .field textarea{resize:vertical;min-height:100px}
+  .form .btn-gold{width:100%;justify-content:center;margin-top:6px}
+  .form-note{font-size:.78rem;color:#8a918d;margin-top:14px;text-align:center}
+  .form-success{display:none;background:rgba(15,61,53,.06);border:1px solid var(--bottle);border-radius:4px;
+    padding:16px;color:var(--bottle);font-size:.9rem;margin-top:16px;text-align:center}
+  .form-error{display:none;background:rgba(168,52,40,.07);border:1px solid #a83428;border-radius:4px;
+    padding:16px;color:#a83428;font-size:.9rem;margin-top:16px;text-align:center}
+
+  /* FOOTER */
+  footer{background:var(--bottle-deep);color:rgba(255,255,255,.7);padding:56px 0 30px}
+  .foot-grid{display:flex;justify-content:space-between;flex-wrap:wrap;gap:30px;margin-bottom:40px}
+  .foot-brand .cn{font-family:"Noto Serif TC";font-weight:700;color:#fff;font-size:1.3rem}
+  .foot-brand .en{font-family:"Archivo";font-size:.7rem;letter-spacing:.24em;color:var(--gold-light);text-transform:uppercase;margin-top:4px}
+  .foot-brand p{font-size:.84rem;margin-top:14px;max-width:300px;color:rgba(255,255,255,.55)}
+  .foot-col h5{color:#fff;font-size:.82rem;letter-spacing:.1em;text-transform:uppercase;margin-bottom:16px;font-family:"IBM Plex Mono";font-weight:500}
+  .foot-col a{display:block;font-size:.88rem;margin-bottom:10px;color:rgba(255,255,255,.62);transition:.2s}
+  .foot-col a:hover{color:var(--gold-light)}
+  .foot-bottom{border-top:1px solid rgba(255,255,255,.1);padding-top:24px;display:flex;
+    justify-content:space-between;flex-wrap:wrap;gap:12px;font-size:.78rem;color:rgba(255,255,255,.45)}
+
+  .reveal{opacity:0;transform:translateY(30px);transition:.8s cubic-bezier(.16,1,.3,1)}
+  .reveal.in{opacity:1;transform:none}
+
+  @media(max-width:1024px){
+    .prod-grid{grid-template-columns:repeat(2,1fr)}
+  }
+  @media(max-width:900px){
+    .nav-links{display:none}.burger{display:flex}
+    .nav-links.open{display:flex;position:absolute;top:100%;left:0;right:0;flex-direction:column;
+      background:var(--bottle-deep);padding:24px 28px;gap:18px}
+    .about-grid,.contact-grid{grid-template-columns:1fr;gap:40px}
+    .hero{padding:110px 0 70px;min-height:auto}
+    .hero-inner{grid-template-columns:1fr;gap:36px}
+    .hero-top{grid-template-columns:1fr;gap:28px;align-items:start}
+    .hero-text{max-width:100%}
+    .prod-grid{grid-template-columns:1fr}
+    .gal-grid{grid-template-columns:repeat(2,1fr)}
+    .oem-steps{grid-template-columns:repeat(2,1fr)}
+    .certbar-inner{gap:30px}
+  }
+  @media(max-width:520px){
+    .wrap{padding:0 20px}
+    .gal-grid{grid-template-columns:repeat(2,1fr)}
+    .hero-actions{flex-direction:column}.btn{justify-content:center}
+    .stats{gap:26px}
+  }
+  @media(prefers-reduced-motion:reduce){
+    *{animation:none!important;transition:none!important;scroll-behavior:auto!important}
+    .reveal{opacity:1;transform:none}
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<header class="nav" id="nav">
+  <div class="wrap nav-inner">
+    <a href="#top" class="brand">
+      <img src="pic_set/企業商標.jpg" alt="宏豐實業 logo" class="brand-logo">
+      <div class="brand-txt">
+        <span class="cn">宏豐實業股份有限公司</span>
+        <span class="en">Big Full Industrial Co., Ltd.</span>
+      </div>
+    </a>
+    <nav class="nav-links" id="navlinks">
+      <a href="#about">關於我們</a>
+      <a href="#products">產品項目</a>
+      <a href="#gallery">廠房實景</a>
+      <a href="#oem">客製代工</a>
+      <a href="#contact" class="nav-cta">聯絡我們</a>
+    </nav>
+    <div class="burger" id="burger"><span></span><span></span><span></span></div>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero" id="top">
+  <div class="drop d1"></div><div class="drop d2"></div><div class="drop d3"></div>
+  <div class="wrap hero-inner">
+    <div class="hero-top">
+      <div class="hero-text">
+        <div class="hero-cert">ISO 22000 ・ HACCP CERTIFIED ・ MADE IN TAIWAN</div>
+        <h1 class="hero-name">Big Full Industrial<br><span>Co., Ltd.</span></h1>
+        <div class="hero-cn serif">宏豐實業股份有限公司</div>
+        <p class="lead">
+          專業食品製造廠，專注於生產濃糖果汁、風味糖漿、椰果與果醬。「品質與安全」是我們生產的最高前提。
+          <span class="en">A professional food manufacturer producing thick sugar juice, flavor syrup, coconut jelly and jam — where quality and safety always come first.</span>
+        </p>
+      </div>
+      <div class="hero-side">
+        <div class="hero-tags">
+          <span>風味糖漿 Flavor Syrup</span>
+          <span>椰果 Coconut Jelly</span>
+          <span>果醬 Jam</span>
+          <span>OEM 客製代工</span>
+        </div>
+        <div class="hero-actions">
+          <a href="#products" class="btn btn-gold">瀏覽產品 View Products →</a>
+          <a href="#contact" class="btn btn-ghost">洽詢代工 Contact Us</a>
+        </div>
+      </div>
+    </div>
+    <div class="hero-img">
+      <figure class="hero-photo">
+        <img src="pic_set/宏豐外觀1.jpg" alt="宏豐實業公司外觀">
+        <figcaption class="hero-img-tag">彰濱工業區 ・ 專業食品製造廠 Food Manufacturing</figcaption>
+      </figure>
+    </div>
+  </div>
+  <div class="scroll-hint">Scroll</div>
+</section>
+
+<!-- 認證帶 -->
+<div class="certbar">
+  <div class="wrap certbar-inner">
+    <div class="badge">
+      <div class="ring">ISO</div>
+      <div class="t"><b>ISO 22000</b><small>食品安全管理系統 Food Safety Mgmt</small>
+        <div class="cert-links"><a href="pic_set/ISO_登錄證書.pdf" target="_blank">證書（中）</a><a href="pic_set/ISO_英文_登錄證書.pdf" target="_blank">Cert (EN)</a></div>
+      </div>
+    </div>
+    <div class="badge">
+      <div class="ring">HACCP</div>
+      <div class="t"><b>HACCP</b><small>危害分析重要管制點 Hazard Analysis</small>
+        <div class="cert-links"><a href="pic_set/HACCP_登錄證書.pdf" target="_blank">證書（中）</a><a href="pic_set/HACCP_英文_登錄證書.pdf" target="_blank">Cert (EN)</a></div>
+      </div>
+    </div>
+    <div class="badge">
+      <div class="ring">REG</div>
+      <div class="t"><b>工廠登記證 07-003863</b><small>合法立案製造廠 Registered Factory</small></div>
+    </div>
+  </div>
+</div>
+
+<!-- ABOUT -->
+<section class="about" id="about">
+  <div class="wrap">
+    <div class="about-grid">
+      <div class="about-text reveal">
+        <div class="eyebrow">About Us</div>
+        <div class="sec-head" style="margin-bottom:24px">
+          <h2 class="serif">專業、認真，<br>對每個細節謹慎面對<span class="en">A food factory built on diligence & detail</span></h2>
+        </div>
+        <p>本公司是專業食品廠，生產濃糖果汁、風味糖漿、各種口味椰果、水果果醬等產品。專注於生產，以專業認真的態度，對各個細節都謹慎面對。「品質與安全」是本公司生產時最重要的前提，「良好的服務」更是我們兢兢業業的目標。</p>
+        <p>除了基本的產品及規格，本公司也提供代工服務，以技術及品質來把關，為您量身訂做出創新的研發新品，歡迎洽詢。</p>
+        <p class="en-block">The company is a professional food factory specializing in thick sugar juice, flavor syrup, coconut jelly and jam. Focused on production, we pay close attention to every detail — quality and safety are always our top priority. We also provide OEM service and tailor-made new products. Welcome to contact us.</p>
+        <div class="stats">
+          <div class="stat"><div class="num">44<span class="plus">+</span></div><div class="lbl">風味糖漿口味<br>Syrup Flavors</div></div>
+          <div class="stat"><div class="num">15<span class="plus">+</span></div><div class="lbl">果醬品項<br>Jam Varieties</div></div>
+          <div class="stat"><div class="num">2</div><div class="lbl">國際食安認證<br>Certifications</div></div>
+        </div>
+      </div>
+      <div class="about-imgs reveal">
+        <img src="pic_set/宏豐外觀2.jpg" alt="宏豐實業廠區">
+        <img src="pic_set/工廠內部1.jpg" alt="工廠內部">
+        <img src="pic_set/工廠內部2.jpg" alt="工廠內部產線">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PRODUCTS -->
+<section class="products" id="products">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div class="eyebrow">Our Products</div>
+      <h2 class="serif">三大產品系列<span class="en">Three Core Product Lines</span></h2>
+      <p>從基礎規格到量身訂製，提供飲品與餐飲通路最好的原料品質。</p>
+    </div>
+    <div class="prod-grid">
+
+      <div class="prod-card reveal">
+        <div class="ph">
+          <span class="no">01 / SYRUP</span>
+          <img src="pic_set/風味糖漿1.jpg" alt="風味糖漿">
+        </div>
+        <div class="body">
+          <h3 class="serif">風味糖漿<span class="en">Flavor Syrup</span></h3>
+          <div class="spec">規格 Spec：2.5kg×6/箱 ・ 5kg×4/箱 ・ 20kg 鐵桶</div>
+          <p class="desc">超過 50 種風味，從經典水果到咖啡、玫瑰花釀，適用手搖飲。</p>
+          <div class="flavor-toggle" onclick="toggleFlavor(this)">查看全部口味 View all flavors <span class="arrow">▾</span></div>
+          <div class="flavors"><div class="cloud">
+            <span>百香果 Passionfruit</span><span>冬瓜 White Gourd</span><span>黑糖 Brown Sugar</span><span>芒果 Mango</span><span>紅葡萄 Red Grape</span><span>白桃 White Peach</span><span>西瓜 Watermelon</span><span>草莓 Strawberry</span><span>藍莓 Blueberry</span><span>青蘋果 Green Apple</span><span>柳橙 Orange</span><span>紅柚 Grapefruit</span><span>荔枝 Lychee</span><span>鳳梨 Pineapple</span><span>檸檬 Lemon</span><span>水蜜桃 Peach</span><span>蔓越莓 Cranberry</span><span>優格 Yogurt</span><span>洛神 Hibiscus</span><span>甘蔗 Sugar Cane</span><span>薄荷 Peppermint</span><span>桑葚 Mulberry</span><span>蜂蜜 Honey</span><span>櫻桃 Cherry</span><span>蘆筍 Asparagus</span><span>山楂 Hawthorn</span><span>咖啡 Coffee</span><span>芋香蜜 Taro</span><span>覆盆莓 Raspberry</span><span>奇異果 Kiwi</span><span>紅石榴 Grenadine</span><span>芭樂 Guava</span><span>巧克力 Chocolate</span><span>黃哈密瓜 Melon</span><span>綠哈密瓜 Honeydew</span><span>龍眼花蜜 Longan Honey</span><span>金桔 Calamondin</span><span>玫瑰花釀 Rose</span><span>桂花釀 Osmanthus</span><span>西印度櫻桃 Acerola</span><span>莓果汁 Berry</span><span>藍柑橘 Blue Citrus</span><span>楊桃 Starfruit</span><span>水果茶 Fruit Tea</span>
+          </div></div>
+        </div>
+      </div>
+
+      <div class="prod-card reveal">
+        <div class="ph">
+          <span class="no">02 / JELLY</span>
+          <img src="pic_set/星狀椰果.jpg" alt="椰果">
+        </div>
+        <div class="body">
+          <h3 class="serif">椰果<span class="en">Coconut Jelly</span></h3>
+          <div class="spec">規格 Spec：3.8kg ・ 4kg ・ 20kg</div>
+          <p class="desc">提供星狀、愛心造型與椰果條，草莓、鳳梨、芒果、荔枝等多種口味，造型討喜。</p>
+          <div class="flavor-toggle" onclick="toggleFlavor(this)">查看全部口味 View flavors <span class="arrow">▾</span></div>
+          <div class="flavors"><div class="cloud">
+            <span>星狀椰果 Star Shape</span><span>愛心椰果 Heart Shape</span><span>原味條 Original</span><span>鳳梨 Pineapple</span><span>草莓 Strawberry</span><span>芒果 Mango</span><span>荔枝 Lychee</span><span>葡萄 Grape</span><span>藍莓 Blueberry</span><span>百香果 Passionfruit</span><span>青蘋果 Green Apple</span><span>水蜜桃 Peach</span><span>奇異果 Kiwi</span><span>綠哈密瓜 Honeydew</span>
+          </div></div>
+        </div>
+      </div>
+
+      <div class="prod-card reveal">
+        <div class="ph">
+          <span class="no">03 / JAM</span>
+          <img src="pic_set/果醬1.jpg" alt="果醬">
+        </div>
+        <div class="body">
+          <h3 class="serif">果粒果醬<span class="en">Thick Sugar Jam</span></h3>
+          <div class="spec">規格 Spec：4kg×4/箱 ・ 4kg×6/箱 ・ 20kg 鐵桶</div>
+          <p class="desc">真材實料果粒果醬，含百香果加籽、桂圓紅棗、黑糖薑母等特色配方。</p>
+          <div class="flavor-toggle" onclick="toggleFlavor(this)">查看全部口味 View all flavors <span class="arrow">▾</span></div>
+          <div class="flavors"><div class="cloud">
+            <span>百香果加籽 Passionfruit</span><span>草莓顆粒 Strawberry</span><span>鳳梨片 Pineapple</span><span>芒果 Mango</span><span>荔枝 Lychee</span><span>藍莓 Blueberry</span><span>金桔 Kumquat</span><span>蘋果 Apple</span><span>桑葚 Mulberry</span><span>蔓越莓 Cranberry</span><span>水果茶 Fruit Tea</span><span>桂圓 Longan</span><span>桂圓紅棗 Longan & Jujube</span><span>黑糖薑母片 Brown Sugar Ginger</span><span>陳皮桔茶 Tangerine Peel</span>
+          </div></div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section class="gallery" id="gallery">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div class="eyebrow">Facility & Products</div>
+      <h2 class="serif">廠房實景與產品相簿<span class="en">Inside Our Factory</span></h2>
+      <p>嚴謹的生產線，從原料到成品都在完整的食安管理下完成。點擊圖片可放大檢視。</p>
+    </div>
+    <div class="gal-tabs reveal">
+      <div class="gal-tab active" data-cat="all">全部 All</div>
+      <div class="gal-tab" data-cat="factory">廠房 Factory</div>
+      <div class="gal-tab" data-cat="product">產品 Products</div>
+    </div>
+    <div class="gal-grid" id="galgrid"></div>
+  </div>
+</section>
+
+<!-- OEM -->
+<section class="oem" id="oem">
+  <div class="wrap oem-inner reveal">
+    <div class="eyebrow">OEM Service</div>
+    <h2 class="serif">客製化生產代工<span class="en">Tailor-made Manufacturing</span></h2>
+    <p>以技術與品質把關，為您量身研發創新產品。從配方開發、試樣到量產，提供完整代工服務。
+      <span class="en">From recipe development to mass production — we develop innovative, tailor-made products with our technology and quality control.</span></p>
+    <div class="oem-steps">
+      <div class="oem-step"><div class="n">STEP 01</div><h4 class="serif">需求洽談</h4><p>了解口味、規格與通路需求 Consultation</p></div>
+      <div class="oem-step"><div class="n">STEP 02</div><h4 class="serif">配方研發</h4><p>專業團隊量身調配 Recipe Development</p></div>
+      <div class="oem-step"><div class="n">STEP 03</div><h4 class="serif">試樣確認</h4><p>提供樣品反覆調整 Sampling</p></div>
+      <div class="oem-step"><div class="n">STEP 04</div><h4 class="serif">量產交付</h4><p>自動化生產穩定供應 Production</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact" id="contact">
+  <div class="wrap">
+    <div class="contact-grid">
+      <div class="contact-info reveal">
+        <div class="eyebrow">Get in Touch</div>
+        <div class="sec-head" style="margin-bottom:36px">
+          <h2 class="serif">與我們聯繫<span class="en">Contact Information</span></h2>
+        </div>
+        <div class="row">
+          <div class="ic">📍</div>
+          <div><div class="label">Address 地址</div>
+            <div class="val">507001 彰化縣線西鄉彰濱西四路29號（彰濱工業區）
+              <small>No.29, Zhangbin W.4th Rd., Xianxi Township, Changhua County 507, Taiwan (R.O.C.)</small></div></div>
+        </div>
+        <div class="row">
+          <div class="ic">📞</div>
+          <div><div class="label">Tel / Fax 電話・傳真</div>
+            <div class="val">04-7910501 <small>傳真 Fax：04-7910536</small></div></div>
+        </div>
+        <div class="row">
+          <div class="ic">✉️</div>
+          <div><div class="label">Email 信箱</div>
+            <div class="val"><a href="mailto:hong.feng111111@gmail.com">hong.feng111111@gmail.com</a></div></div>
+        </div>
+        <div class="row">
+          <div class="ic">🏭</div>
+          <div><div class="label">Factory Reg. 工廠登記證</div>
+            <div class="val">編號 07-003863</div></div>
+        </div>
+      </div>
+
+      <div class="form reveal">
+        <h3 class="serif">產品 ・ 代工洽詢</h3>
+        <div class="sub">Product & OEM Inquiry — 填寫表單，我們將盡快與您聯繫</div>
+        <form id="inquiryForm" onsubmit="return submitForm(event)">
+          <input type="hidden" name="access_key" value="1d584dc7-ca80-4dd3-a132-5d608c876aa8">
+          <input type="hidden" name="subject" value="宏豐實業官網 — 產品/代工洽詢">
+          <input type="hidden" name="from_name" value="宏豐實業官網表單">
+          <input type="checkbox" name="botcheck" style="display:none" tabindex="-1" autocomplete="off">
+          <div class="field">
+            <label>姓名 / 公司 Name <span class="req">*</span></label>
+            <input type="text" name="name" required placeholder="您的姓名或公司名稱">
+          </div>
+          <div class="field">
+            <label>Email <span class="req">*</span></label>
+            <input type="email" name="email" required placeholder="example@mail.com">
+          </div>
+          <div class="field">
+            <label>電話 Phone</label>
+            <input type="tel" name="phone" placeholder="聯絡電話">
+          </div>
+          <div class="field">
+            <label>洽詢項目 Interested In</label>
+            <select name="topic">
+              <option>風味糖漿 Flavor Syrup</option>
+              <option>濃糖果汁 Thick Sugar Juice</option>
+              <option>椰果 Coconut Jelly</option>
+              <option>果醬 Jam</option>
+              <option>OEM 客製化代工</option>
+              <option>其他 Other</option>
+            </select>
+          </div>
+          <div class="field">
+            <label>需求說明 Message <span class="req">*</span></label>
+            <textarea name="message" required placeholder="請描述您的需求、數量或口味…"></textarea>
+          </div>
+          <button type="submit" class="btn btn-gold" id="submitBtn">送出洽詢 Send Inquiry →</button>
+          <div class="form-note">送出後將直接寄達宏豐實業信箱，您將留在本頁面</div>
+          <div class="form-success" id="formSuccess">✓ 已送出，感謝您的洽詢！我們將盡快與您聯繫。</div>
+          <div class="form-error" id="formError">✕ 送出失敗，請稍後再試，或直接來電 04-7910501。</div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <div class="cn serif">宏豐實業股份有限公司</div>
+        <div class="en">Big Full Industrial Co., Ltd.</div>
+        <p>專業食品製造廠，通過 ISO 22000 與 HACCP 驗證。濃糖果汁・風味糖漿・椰果・果醬・OEM 代工。</p>
+      </div>
+      <div class="foot-col">
+        <h5>Products</h5>
+        <a href="#products">風味糖漿</a><a href="#products">濃糖果汁</a><a href="#products">椰果</a><a href="#products">果醬</a>
+      </div>
+      <div class="foot-col">
+        <h5>Company</h5>
+        <a href="#about">關於我們</a><a href="#gallery">廠房實景</a><a href="#oem">客製代工</a><a href="#contact">聯絡我們</a>
+      </div>
+      <div class="foot-col">
+        <h5>Contact</h5>
+        <a href="tel:047910501">04-7910501</a>
+        <a href="mailto:hong.feng111111@gmail.com">hong.feng111111@gmail.com</a>
+        <a href="#contact">彰化縣線西鄉</a>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <div>© 2026 宏豐實業股份有限公司 Big Full Industrial Co., Ltd. All rights reserved.</div>
+      <div>ISO 22000 ・ HACCP Certified ・ 工廠登記證 07-003863</div>
+    </div>
+  </div>
+</footer>
+
+<div class="lightbox" id="lightbox"><span class="close">×</span><img id="lbimg" src="" alt=""></div>
+
+<script>
+  // nav scroll
+  const nav=document.getElementById('nav');
+  window.addEventListener('scroll',()=>nav.classList.toggle('solid',window.scrollY>40));
+  // burger
+  const burger=document.getElementById('burger'),navlinks=document.getElementById('navlinks');
+  burger.addEventListener('click',()=>navlinks.classList.toggle('open'));
+  navlinks.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>navlinks.classList.remove('open')));
+
+  // flavor toggle
+  function toggleFlavor(el){el.classList.toggle('open');el.nextElementSibling.classList.toggle('open');}
+
+  // gallery data
+  const gal=[
+    {c:'factory',src:'pic_set/宏豐外觀1.jpg'},
+    {c:'factory',src:'pic_set/宏豐外觀2.jpg'},
+    {c:'factory',src:'pic_set/工廠內部1.jpg'},
+    {c:'factory',src:'pic_set/工廠內部2.jpg'},
+    {c:'factory',src:'pic_set/工廠內部3.jpg'},
+    {c:'factory',src:'pic_set/工廠內部4.jpg'},
+    {c:'factory',src:'pic_set/工廠內部5.jpg'},
+    {c:'factory',src:'pic_set/工廠內部6.jpg'},
+    {c:'factory',src:'pic_set/工廠內部7.jpg'},
+    {c:'factory',src:'pic_set/工廠內部8.jpg'},
+    {c:'product',src:'pic_set/星狀椰果.jpg'},
+    {c:'product',src:'pic_set/愛心椰果.jpg'},
+    {c:'product',src:'pic_set/椰果條1.jpg'},
+    {c:'product',src:'pic_set/椰果條2.jpg'},
+    {c:'product',src:'pic_set/椰果條3.jpg'},
+    {c:'product',src:'pic_set/風味糖漿1.jpg'},
+    {c:'product',src:'pic_set/風味糖漿2.jpg'},
+    {c:'product',src:'pic_set/風味糖漿3.jpg'},
+    {c:'product',src:'pic_set/風味糖漿4.jpg'},
+    {c:'product',src:'pic_set/風味糖漿5.jpg'},
+    {c:'product',src:'pic_set/風味糖漿6.jpg'},
+    {c:'product',src:'pic_set/風味糖漿7.jpg'},
+    {c:'product',src:'pic_set/果醬1.jpg'},
+    {c:'product',src:'pic_set/果醬2.jpg'},
+    {c:'product',src:'pic_set/果醬3.jpg'},
+    {c:'product',src:'pic_set/果醬4.jpg'},
+    {c:'product',src:'pic_set/果醬5.jpg'},
+  ];
+  const grid=document.getElementById('galgrid');
+  function renderGal(cat){
+    grid.innerHTML='';
+    gal.filter(g=>cat==='all'||g.c===cat).forEach(g=>{
+      const d=document.createElement('div');d.className='gal-item';
+      d.innerHTML=`<img src="${g.src}" loading="lazy" alt="宏豐實業">`;
+      d.onclick=()=>openLb(g.src);
+      grid.appendChild(d);
+    });
+  }
+  renderGal('all');
+  document.querySelectorAll('.gal-tab').forEach(t=>t.onclick=()=>{
+    document.querySelectorAll('.gal-tab').forEach(x=>x.classList.remove('active'));
+    t.classList.add('active');renderGal(t.dataset.cat);
+  });
+
+  // lightbox
+  const lb=document.getElementById('lightbox'),lbimg=document.getElementById('lbimg');
+  function openLb(src){lbimg.src=src;lb.classList.add('show');}
+  lb.onclick=()=>lb.classList.remove('show');
+
+  // form -> Web3Forms (直送信箱)
+  async function submitForm(e){
+    e.preventDefault();
+    const f=e.target;
+    const btn=document.getElementById('submitBtn');
+    const ok=document.getElementById('formSuccess');
+    const err=document.getElementById('formError');
+    ok.style.display='none';err.style.display='none';
+    btn.disabled=true;const label=btn.textContent;btn.textContent='送出中 Sending…';
+    try{
+      const res=await fetch('https://api.web3forms.com/submit',{
+        method:'POST',
+        headers:{'Accept':'application/json'},
+        body:new FormData(f)
+      });
+      const data=await res.json();
+      if(data.success){
+        ok.style.display='block';
+        f.reset();
+      }else{
+        err.style.display='block';
+      }
+    }catch(_){
+      err.style.display='block';
+    }finally{
+      btn.disabled=false;btn.textContent=label;
+    }
+    return false;
+  }
+
+  // reveal on scroll
+  const io=new IntersectionObserver(es=>es.forEach(en=>{if(en.isIntersecting){en.target.classList.add('in');io.unobserve(en.target);}}),{threshold:.12});
+  document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+</script>
+</body>
+</html>
